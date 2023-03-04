@@ -1,6 +1,5 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React, { useState, useEffect } from 'react'
-import CategoryCard from "./CategoryCard"
 
 const Category = () => {
   const [category, setCategory] = useState([])
@@ -24,9 +23,6 @@ const Category = () => {
       horizontal
       showsHorizontalScrollIndicator={false}
     >
-
-      {/* Category Card */}
-      {/* <CategoryCard imgURl="https://dotawallpapers.com/wallpaper/dota2hq.eu-tiny-plays-dota-2-3555-1600x900.jpg" title="Testing 1" /> */}
 
 {
   category.map(item => {

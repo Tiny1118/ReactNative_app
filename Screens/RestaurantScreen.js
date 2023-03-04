@@ -6,8 +6,6 @@ import Icon from "react-native-vector-icons/Ionicons"
 import DishRow from '../Components/DishRow'
 
 const RestaurantScreen = () => {
-  const [category, setCategory] = useState([])
-  const [loading, setloading] = useState(true)
   const navigation = useNavigation()
   const { params: {
     id, imgUrl, title, rating, genre, address, short_description, dishes, long, lat

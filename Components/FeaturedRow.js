@@ -78,7 +78,7 @@ const FeaturedRow = ({ id, title, description }) => {
      imgUrl="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/social/viper.jpg"
      title="Viper"
      rating={4.5}
-     genre="Japanese" 
+     genre="Japanese"
      address="123 Main St"
      short_description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using"
      dishes={[]}

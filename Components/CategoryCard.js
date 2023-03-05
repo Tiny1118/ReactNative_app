@@ -1,49 +1,22 @@
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function CategoryCard() {
+export default function CategoryCard({ id, title, image }) {
  return (
   <View style={s.body}>
 
-   <ScrollView
-    horizontal={true}
-    showsHorizontalScrollIndicator={false}
-   >
 
-    <TouchableOpacity>
-     <View style={s.card}>
-      <Image source={{
-       width: 45,
-       height: 45,
-       uri: "https://cdn-icons-png.flaticon.com/512/1404/1404945.png"
-      }} />
-      <Text style={s.cardText}>Пицца</Text>
-     </View>
-    </TouchableOpacity>
+   <TouchableOpacity>
+    <View style={s.card}>
+     <Image source={{
+      uri: image,
+     }}
+      style={s.cardImage}
+     />
+     <Text style={s.cardText}>{title}</Text>
+    </View>
+   </TouchableOpacity>
 
-    <TouchableOpacity>
-     <View style={s.card}>
-      <Image source={{
-       width: 45,
-       height: 45,
-       uri: "https://o.remove.bg/downloads/e427a269-750c-4663-8e17-d26cf29480ff/png-transparent-sushi-makizushi-cucumber-nori-cafe-icon-sushi-grill-rice-logo-red-thumbnail-removebg-preview.png"
-      }} />
-      <Text style={s.cardText}>Суши</Text>
-     </View>
-    </TouchableOpacity>
-
-    <TouchableOpacity>
-     <View style={s.card}>
-      <Image source={{
-       width: 45,
-       height: 45,
-       uri: "https://cdn-icons-png.flaticon.com/512/7182/7182828.png"
-      }} />
-      <Text style={s.cardText}>Десерты</Text>
-     </View>
-    </TouchableOpacity>
-
-   </ScrollView>
 
   </View>
  )
@@ -51,11 +24,11 @@ export default function CategoryCard() {
 
 const s = StyleSheet.create({
  body: {
-  paddingLeft: 20,
+  paddingRight: 20,
   paddingVertical: 20
  },
  card: {
-  width: 160,
+  width: 180,
   height: 55,
   borderColor: "#e4e4e4",
   borderWidth: 1,
@@ -63,11 +36,14 @@ const s = StyleSheet.create({
   borderRadius: 6,
   flexDirection: 'row',
   alignItems: 'center',
-  paddingHorizontal: 10,
-  marginRight: 12
+  paddingLeft: 15
+ },
+ cardImage: {
+  width: 40,
+  height: 40,
  },
  cardText: {
   fontSize: 18,
-  marginLeft: 12
+  marginLeft: 20
  }
 })

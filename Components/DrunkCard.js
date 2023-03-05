@@ -2,13 +2,13 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-export default function SushiCard({ id, title, info, price, image, full_info }) {
+export default function PizzaCard({ id, title, info, price, image }) {
   const navigation = useNavigation()
   return (
     <View style={s.body}>
 
       <TouchableOpacity onPress={() => navigation.navigate("Screen", {
-        id, title, info, price, image, full_info
+        id, title, info, price, image
       })}>
         <View style={s.card}>
           <Image source={{
@@ -28,10 +28,10 @@ export default function SushiCard({ id, title, info, price, image, full_info }) 
         </View>
       </TouchableOpacity>
 
+
     </View>
   )
 }
-
 
 const s = StyleSheet.create({
   body: {
@@ -54,7 +54,7 @@ const s = StyleSheet.create({
   cardImg: {
     width: 100,
     height: 100,
-    borderRadius: 12
+    resizeMode: 'contain'
   },
   textBox: {
     marginLeft: 10

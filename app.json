@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "deliveroo-clone",
-    "slug": "shopapp",
+    "name": "Shop",
+    "slug": "ios",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/gif.gif",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,23 +19,22 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.asliddin1.shopapp"
+      "bundleIdentifier": "com.asliddin1.ios"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo.jpg",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.asliddin1.shopapp"
+      "package": "com.asliddin1.ios"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logo.jpg"
     },
     "extra": {
       "eas": {
-        "projectId": "ecf2ef8c-30fa-466e-9bb8-88fcdbc9a5b0"
+        "projectId": "31dc2fd0-4663-4ec9-9209-07b4be6f4601"
       }
-    },
-    "owner": "asliddin1"
+    }
   }
 }

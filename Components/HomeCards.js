@@ -11,22 +11,22 @@ export default function HomeCards() {
 
 
     <View style={s.card}>
-     <Image style={s.card_img} source={require("../assets/images/img1.png")} />
+     <Image style={s.card_img} source={require("../assets/img1.png")} />
      <Text style={s.card_text}>3 средние пиццы от 999 рублей</Text>
     </View>
 
     <View style={s.card}>
-     <Image style={s.card_img2} source={require("../assets/images/img2.png")} />
+     <Image style={s.card_img2} source={require("../assets/img2.png")} />
      <Text style={s.card_text}>Кэшбек 10% на самовывоз (доставка)</Text>
     </View>
 
     <View style={s.card}>
-     <Image style={s.card_img} source={require("../assets/images/img1.png")} />
+     <Image style={s.card_img} source={require("../assets/img1.png")} />
      <Text style={s.card_text}>3 средние пиццы от 999 рублей</Text>
     </View>
 
     <View style={s.card}>
-     <Image style={s.card_img2} source={require("../assets/images/img2.png")} />
+     <Image style={s.card_img2} source={require("../assets/img2.png")} />
      <Text style={s.card_text}>Кэшбек 10% на самовывоз (доставка)</Text>
     </View>
 

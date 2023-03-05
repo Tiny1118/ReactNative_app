@@ -2,13 +2,13 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-export default function PizzaCard({ id, title, info, price, image }) {
+export default function PizzaCard({ id, title, info, price, image, full_info }) {
   const navigation = useNavigation()
   return (
     <View style={s.body}>
 
       <TouchableOpacity onPress={() => navigation.navigate("Pizza", {
-        id, title, info, price, image
+        id, title, info, price, image, full_info
       })}>
         <View style={s.card}>
           <Image source={{
@@ -53,7 +53,8 @@ const s = StyleSheet.create({
   },
   cardImg: {
     width: 100,
-    height: 100
+    height: 100,
+    resizeMode: 'contain'
   },
   textBox: {
     marginLeft: 10

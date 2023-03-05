@@ -5,7 +5,8 @@ import HomeScreen from './Screens/HomeScreen';
 import PizzaScreen from "./Screens/PizzaScreen"
 import AllPizzaScreen from "./Screens/AllPizzaScreen"
 import AllSushiScreen from "./Screens/AllSushiScreen"
-import SushiScreen from './Screens/SushiScreen';
+import AllDrunkScreen from "./Screens/AllDrunkScreen"
+import AllScreen from "./Screens/AllScreen"
 
 
 
@@ -20,7 +21,8 @@ export default function App() {
         <Stack.Screen name="Pizza" component={PizzaScreen} />
         <Stack.Screen name='AllPizza' component={AllPizzaScreen} />
         <Stack.Screen name='AllSushi' component={AllSushiScreen} />
-        <Stack.Screen name='Sushi' component={SushiScreen} />
+        <Stack.Screen name='AllDrunk' component={AllDrunkScreen} />
+        <Stack.Screen name='Screen' component={AllScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

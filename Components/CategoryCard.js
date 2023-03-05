@@ -64,7 +64,7 @@ const s = StyleSheet.create({
   flexDirection: 'row',
   alignItems: 'center',
   paddingHorizontal: 10,
-  marginRight: 20
+  marginRight: 12
  },
  cardText: {
   fontSize: 18,

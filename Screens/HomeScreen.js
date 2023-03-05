@@ -2,10 +2,11 @@ import { View, Text, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity 
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import Icon from "react-native-vector-icons/Ionicons"
-import Category from '../Components/Category'
-import FeaturedRow from '../Components/FeaturedRow'
 import CategoryCard from '../Components/CategoryCard'
 import PizzaCard from '../Components/PizzaCard'
+import HomeCards from '../Components/HomeCards'
+import SushiRow from '../Components/SushiRow'
+import PizzaRow from '../Components/PizzaRow'
 
 export default function HomeScreen() {
  const navigation = useNavigation()
@@ -86,10 +87,13 @@ export default function HomeScreen() {
      <Text style={s.topText}>Куда пицца</Text>
     </View>
 
-    {/* Category Cards */}
+    {/* Category Row */}
     <CategoryCard />
 
-    {/* Pizza Cards */}
+    {/* Home Row */}
+    <HomeCards />
+
+    {/* Pizza Row */}
     <View style={s.pizzaTop}>
      <Text style={s.pizza_text}>Пицца</Text>
      <TouchableOpacity onPress={() => navigation.navigate("AllPizza")}>
@@ -100,7 +104,21 @@ export default function HomeScreen() {
      </TouchableOpacity>
     </View>
 
-    <PizzaCard />
+    <PizzaRow />
+
+    {/* Sushi Row */}
+    <View style={s.pizzaTop}>
+     <Text style={s.pizza_text}>Суши</Text>
+     <TouchableOpacity onPress={() => navigation.navigate("AllSushi")}>
+      <View style={s.topBtn}>
+       <Text style={s.allText}>Все</Text>
+       <Icon name='arrow-forward-circle-outline' size={26} color={'#FF7010'} />
+      </View>
+     </TouchableOpacity>
+    </View>
+    <SushiRow />
+
+
 
 
    </ScrollView>

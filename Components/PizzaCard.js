@@ -2,80 +2,27 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-export default function PizzaCard() {
+export default function PizzaCard({ id, title, info, price, image }) {
   const navigation = useNavigation()
   return (
     <View style={s.body}>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Pizza")}>
+      <TouchableOpacity onPress={() => navigation.navigate("Pizza", {
+        id, title, info, price, image
+      })}>
         <View style={s.card}>
           <Image source={{
-            uri: "https://o.remove.bg/downloads/61deb14e-79aa-4f0e-a55d-29e4fbcf63c3/png-transparent-pizza-margherita-sushi-pizza-pizza-delivery-pizza-thumbnail-removebg-preview.png"
+            uri: image
           }}
             style={s.cardImg}
           />
           <View style={s.textBox}>
-            <Text style={s.title}>Чикен Сладкий Чили</Text>
-            <Text style={s.info}>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус, Соус...</Text>
+            <Text style={s.title}>{title}</Text>
+            <Text style={s.info}>{info}</Text>
             <TouchableOpacity>
               <View style={s.cardBtn}>
-                <Text style={s.btnText}>от 499 ₽</Text></View>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("Pizza")}>
-        <View style={s.card}>
-          <Image source={{
-            uri: "https://o.remove.bg/downloads/6bbbb6dd-9367-4cf1-83cf-052e96a8db9a/png-clipart-pizza-pizza-removebg-preview.png"
-          }}
-            style={s.cardImg}
-          />
-          <View style={s.textBox}>
-            <Text style={s.title}>EASY PEASY огуречный расколбас</Text>
-            <Text style={s.info}>Огурцы маринованные, Пепперон...</Text>
-            <TouchableOpacity>
-              <View style={s.cardBtn}>
-                <Text style={s.btnText}>от 549 ₽</Text>
+                <Text style={s.btnText}>{price}</Text>
               </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("Pizza")}>
-        <View style={s.card}>
-          <Image source={{
-            uri: "https://o.remove.bg/downloads/6de553f4-e9aa-4333-b0f7-c469a6cab527/png-transparent-pizza-garlic-bread-food-clock-ingredient-pizza-thumbnail-removebg-preview.png"
-          }}
-            style={s.cardImg}
-          />
-          <View style={s.textBox}>
-            <Text style={s.title}>EASY PEASY чикен а-ля хрен</Text>
-            <Text style={s.info}>Курица, Лук, Соус Карбонара, Сыр Моцарелла, Чипсы EASY PEASY...</Text>
-            <TouchableOpacity>
-              <View style={s.cardBtn}>
-                <Text style={s.btnText}>от 249 ₽</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("Pizza")}>
-        <View style={s.card}>
-          <Image source={{
-            uri: "https://o.remove.bg/downloads/ccc25c13-eacd-4a8e-989f-1b826ea2b253/fresh-tasty-four-seasons-pizza-isolated-white-background_136401-4229-removebg-preview.png"
-          }}
-            style={s.cardImg}
-          />
-          <View style={s.textBox}>
-            <Text style={s.title}>4 сезона</Text>
-            <Text style={s.info}>Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы маринован...</Text>
-            <TouchableOpacity>
-              <View style={s.cardBtn}>
-                <Text style={s.btnText}>от 630 ₽</Text></View>
             </TouchableOpacity>
           </View>
         </View>
@@ -102,7 +49,6 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 10,
-    marginBottom: 20,
     paddingVertical: 12
   },
   cardImg: {

@@ -19,13 +19,13 @@ export default function Category() {
     <CategoryCard
      id="1"
      title="Cуши"
-     image="https://o.remove.bg/downloads/0327adb8-a20f-4782-adba-ca3dbd8d079c/250-2504018_sushi-icon-icon-removebg-preview.png"
+     image="https://bartori.ru/files/products/27%D0%BA%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F.300x300.png?4c2fd6d1884bc30cb421993fcc7eaa00"
     />
 
     <CategoryCard
      id="2"
      title="Напитки"
-     image="https://o.remove.bg/downloads/68e4d587-261a-4172-a2d0-8a5fce67d5e1/1880417-removebg-preview.png"
+     image="https://cdn-icons-png.flaticon.com/512/1880/1880417.png"
     />
 
     <CategoryCard

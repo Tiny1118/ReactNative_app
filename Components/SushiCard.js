@@ -19,7 +19,9 @@ export default function SushiCard({ id, title, info, price, image, full_info }) 
           <View style={s.textBox}>
             <Text style={s.title}>{title}</Text>
             <Text style={s.info}>{info}</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Screen", {
+              id, title, info, price, image
+            })}>
               <View style={s.cardBtn}>
                 <Text style={s.btnText}>{price}</Text>
               </View>

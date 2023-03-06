@@ -1,9 +1,18 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 
 export default function PizzaCard({ id, title, info, price, image, full_info }) {
   const navigation = useNavigation()
+  const [alert, setAlert] = useState(false)
+
+  function shop() {
+    setAlert(true)
+    setTimeout(() => {
+      setAlert(false)
+    }, 2000);
+  }
+
   return (
     <View style={s.body}>
 
@@ -19,9 +28,11 @@ export default function PizzaCard({ id, title, info, price, image, full_info }) 
           <View style={s.textBox}>
             <Text style={s.title}>{title}</Text>
             <Text style={s.info}>{info}</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Pizza", {
+              id, title, info, price, image, full_info
+            })}>
               <View style={s.cardBtn}>
-                <Text style={s.btnText}>{price}</Text>
+                <Text style={s.btnText}>{price} ₽</Text>
               </View>
             </TouchableOpacity>
           </View>

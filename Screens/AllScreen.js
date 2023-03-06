@@ -1,14 +1,22 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity, Button } from 'react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRoute, useNavigation } from '@react-navigation/native'
 
 export default function AllScreen() {
   const navigation = useNavigation()
+  const [alert, setAlert] = useState(false)
   useEffect(() => {
     navigation.setOptions({
       title: title
     })
   }, [])
+
+  function shop() {
+    setAlert(true)
+    setTimeout(() => {
+      setAlert(false)
+    }, 2000);
+  }
 
   const { params: {
     id,
@@ -21,6 +29,13 @@ export default function AllScreen() {
 
   return (
     <View style={s.body}>
+      {
+        alert === true ? (
+          <View style={s.alert}>
+            <Text style={s.alertText}>Товар добавлен в корзину</Text>
+          </View>
+        ) : ""
+      }
 
       <View style={s.imgBox}>
         <Image source={{
@@ -36,6 +51,7 @@ export default function AllScreen() {
         <Text style={s.price}>Итого: {price}</Text>
         <TouchableOpacity
           style={s.btn}
+          onPress={() => shop()}
         >
           <Text style={s.btnText}>В корзину</Text>
         </TouchableOpacity>
@@ -90,6 +106,22 @@ const s = StyleSheet.create({
     justifyContent: 'center'
   },
   btnText: {
+    color: '#fff'
+  },
+  alert: {
+    width: "80%",
+    height: 40,
+    position: 'absolute',
+    left: "16%",
+    top: 12,
+    zIndex: 99,
+    backgroundColor: '#FF7010',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 50
+  },
+  alertText: {
     color: '#fff'
   }
 })

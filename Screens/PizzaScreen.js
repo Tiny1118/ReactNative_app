@@ -1,12 +1,26 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView, Pressable } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Icon from "react-native-vector-icons/Ionicons"
 import { useRoute, useNavigation } from '@react-navigation/native'
+
 export default function PizzaScreen() {
-  const [checked, setChecked] = useState(true)
+  const { params: {
+    id,
+    title,
+    info,
+    price,
+    image,
+    full_info
+  } } = useRoute()
+  const [checked, setChecked] = useState(false)
   const [checked1, setChecked1] = useState(false)
   const [checked2, setChecked2] = useState(false)
   const [checked3, setChecked3] = useState(false)
+  const [btn, setBtn] = useState(true)
+  const [btn1, setBtn1] = useState(false)
+  const [btn2, setBtn2] = useState(false)
+  const [alert, setAlert] = useState(false)
+  const [total, setTotal] = useState(price)
 
   const navigation = useNavigation()
   useEffect(() => {
@@ -16,27 +30,88 @@ export default function PizzaScreen() {
   }, [])
   function check() {
     checked === false ? setChecked(true) : setChecked(false)
+    if (checked === true) {
+      setTotal(total - 59)
+    } else {
+      setTotal(total * 1 + 59)
+    }
   }
   function check1() {
     checked1 === false ? setChecked1(true) : setChecked1(false)
+    if (checked1 === true) {
+      setTotal(total - 59)
+    } else {
+      setTotal(total * 1 + 59)
+    }
   }
   function check2() {
     checked2 === false ? setChecked2(true) : setChecked2(false)
+    if (checked2 === true) {
+      setTotal(total - 59)
+    } else {
+      setTotal(total * 1 + 59)
+    }
   }
   function check3() {
     checked3 === false ? setChecked3(true) : setChecked3(false)
+    if (checked3 === true) {
+      setTotal(total - 59)
+    } else {
+      setTotal(total * 1 + 59)
+    }
   }
-  const { params: {
-    id,
-    title,
-    info,
-    price,
-    image,
-    full_info
-  } } = useRoute()
+  function btnChek() {
+    setBtn(true)
+    setBtn1(false)
+    setBtn2(false)
+    if (btn === false) {
+      setTotal(price)
+      setChecked(false)
+      setChecked1(false)
+      setChecked2(false)
+      setChecked3(false)
+    } 
+  }
+  function btnChek2() {
+    setBtn(false)
+    setBtn1(true)
+    setBtn2(false)
+    if (btn1 === false) {
+      setTotal(price*1 + 90)
+      setChecked(false)
+      setChecked1(false)
+      setChecked2(false)
+      setChecked3(false)
+    }
+  }
+  function btnChek3() {
+    setBtn(false)
+    setBtn1(false)
+    setBtn2(true)
+    if (btn2 === false) {
+      setTotal(total*1 + 180)
+      setChecked(false)
+      setChecked1(false)
+      setChecked2(false)
+      setChecked3(false)
+    }
+  }
+  function shop() {
+    setAlert(true)
+    setTimeout(() => {
+      setAlert(false)
+    }, 2000);
+  }
 
   return (
     <View style={s.body}>
+      {
+        alert === true ? (
+          <View style={s.alert}>
+            <Text style={s.alertText}>Товар добавлен в корзину</Text>
+          </View>
+        ) : ""
+      }
       <ScrollView horizontal={false} showsVerticalScrollIndicator={false} >
 
         <View style={s.imgBox}>
@@ -48,6 +123,73 @@ export default function PizzaScreen() {
         </View>
         <Text style={s.title}>{title}</Text>
         <Text style={s.fullInfo}>{full_info}</Text>
+
+        <View style={s.buttons}>
+          <TouchableOpacity onPress={() => btnChek()} style={btn === true ? {
+            width: 110,
+            height: 45,
+            backgroundColor: '#FF7010',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: 6
+          } : {
+            width: 110,
+            height: 45,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Text style={btn === true ? {
+              color: '#fff'
+            } : {
+              color: '#000'
+            }}>20 см</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => btnChek2()} style={btn1 === true ? {
+            width: 110,
+            height: 45,
+            backgroundColor: '#FF7010',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: 6
+          } : {
+            width: 110,
+            height: 45,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Text style={btn1 === true ? {
+              color: '#fff'
+            } : {
+              color: '#000'
+            }}>28 см</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => btnChek3()} style={btn2 === true ? {
+            width: 110,
+            height: 45,
+            backgroundColor: '#FF7010',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: 6
+          } : {
+            width: 110,
+            height: 45,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Text style={btn2 === true ? {
+              color: '#fff'
+            } : {
+              color: '#000'
+            }}>33 см</Text>
+          </TouchableOpacity>
+
+        </View>
 
         {/* CategoryPizza */}
         <Text style={s.categoryTitle}>Добавьте в Пиццу</Text>
@@ -62,7 +204,7 @@ export default function PizzaScreen() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginRight: 25
+                marginRight: 15
               } : {
                 width: 120,
                 height: 120,
@@ -73,7 +215,7 @@ export default function PizzaScreen() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 position: 'relative',
-                marginRight: 25
+                marginRight: 15
               }}>
                 <Image source={{
                   uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmp6rvek99XBZQjQyKzpE4WB4QB4fE22wJbgROKG3RqzBJ3T5zzmog0a1Bw9Wtq613eM&usqp=CAU"
@@ -109,7 +251,7 @@ export default function PizzaScreen() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginRight: 25
+                marginRight: 15
               } : {
                 width: 120,
                 height: 120,
@@ -120,7 +262,7 @@ export default function PizzaScreen() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 position: 'relative',
-                marginRight: 25
+                marginRight: 15
               }}>
                 <Image source={{
                   uri: "https://cdn-icons-png.flaticon.com/512/3823/3823366.png"
@@ -156,7 +298,7 @@ export default function PizzaScreen() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginRight: 25
+                marginRight: 15
               } : {
                 width: 120,
                 height: 120,
@@ -167,7 +309,7 @@ export default function PizzaScreen() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 position: 'relative',
-                marginRight: 25
+                marginRight: 15
               }}>
                 <Image source={{
                   uri: "https://cdn-icons-png.flaticon.com/512/186/186131.png"
@@ -203,7 +345,7 @@ export default function PizzaScreen() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginRight: 25
+                marginRight: 15
               } : {
                 width: 120,
                 height: 120,
@@ -247,8 +389,9 @@ export default function PizzaScreen() {
         </ScrollView>
 
         <View style={s.bottom}>
-          <Text style={s.price}>Итого: {price}</Text>
+          <Text style={s.price}>Итого: {total}</Text>
           <TouchableOpacity
+            onPress={() => shop()}
             style={s.btn}
           >
             <Text style={s.btnText}>В корзину</Text>
@@ -264,8 +407,7 @@ const s = StyleSheet.create({
     flexDirection: 'column',
     paddingHorizontal: 20,
     paddingVertical: 20,
-    backgroundColor: '#fff',
-    paddingBottom: 60
+    backgroundColor: '#fff'
   },
   imgBox: {
     flexDirection: 'column',
@@ -305,7 +447,8 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 30
+    marginTop: 30,
+    marginBottom: 80
   },
   price: {
     fontSize: 18,
@@ -334,5 +477,29 @@ const s = StyleSheet.create({
     bottom: -40,
     fontSize: 14,
     fontWeight: '700'
-  }
+  },
+  alert: {
+    width: "80%",
+    height: 40,
+    position: 'absolute',
+    left: "16%",
+    top: 12,
+    zIndex: 99,
+    backgroundColor: '#FF7010',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 50
+  },
+  alertText: {
+    color: '#fff'
+  },
+  buttons: {
+    width: "100%",
+    height: 45,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 20
+  },
 })

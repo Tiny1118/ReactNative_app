@@ -71,23 +71,19 @@ export default function HomeScreen() {
      </TouchableOpacity>
     </View>
     <DrunkRow />
-
-
    </ScrollView>
   </View >
  )
 }
 
 const s = StyleSheet.create({
- body: {
-  paddingVertical: 20
- },
  top: {
   paddingVertical: 5,
   flexDirection: 'row',
   alignItems: 'center',
   backgroundColor: '#fff',
-  paddingLeft: 20
+  paddingLeft: 20,
+  paddingTop: 20
  },
  topImg: {
   width: 100,

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Shop",
-    "slug": "ios",
+    "name": "pizza",
+    "slug": "pizza",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.jpg",
@@ -19,14 +19,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.asliddin1.ios"
+      "bundleIdentifier": "com.asliddin1.pizza"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.jpg",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.asliddin1.ios"
+      "package": "com.asliddin1.pizza"
     },
     "web": {
       "favicon": "./assets/logo.jpg"

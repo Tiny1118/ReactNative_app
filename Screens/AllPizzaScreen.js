@@ -21,7 +21,7 @@ export default function AllPizzaScreen() {
           info="Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус, Соус..."
           full_info="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ex rerum, exercitationem maiores ut, adipisci voluptate ipsam ullam eius reprehenderit sit voluptas at corporis illo. Suscipit modi ea recusandae hic."
           price="499"
-          image="https://www.pngfind.com/pngs/m/60-603686_-png-transparent-png.png"
+          image="https://pizzapauza.ru/assets/images/products/73/13vegano-slajs-30.jpeg.webp"
         />
 
         <PizzaCard
@@ -52,16 +52,16 @@ export default function AllPizzaScreen() {
         />
 
         <PizzaCard
-          id="0"
+          id="4"
           title="Чикен Сладкий Чили"
           info="Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус, Соус..."
           full_info="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ex rerum, exercitationem maiores ut, adipisci voluptate ipsam ullam eius reprehenderit sit voluptas at corporis illo. Suscipit modi ea recusandae hic."
           price="499"
-          image="https://www.pngfind.com/pngs/m/60-603686_-png-transparent-png.png"
+          image="https://pizzapauza.ru/assets/images/products/73/13vegano-slajs-30.jpeg.webp"
         />
 
         <PizzaCard
-          id="1"
+          id="5"
           title="EASY PEASY огуречный расколбас"
           full_info="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ex rerum, exercitationem maiores ut, adipisci voluptate ipsam ullam eius reprehenderit sit voluptas at corporis illo. Suscipit modi ea recusandae hic."
           info="Огурцы маринованные, Пепперон..."
@@ -70,7 +70,7 @@ export default function AllPizzaScreen() {
         />
 
         <PizzaCard
-          id="2"
+          id="6"
           title="EASY PEASY чикен а-ля хрен"
           info="Курица, Лук, Соус Карбонара, Сыр Моцарелла, Чипсы EASY PEASY..."
           full_info="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ex rerum, exercitationem maiores ut, adipisci voluptate ipsam ullam eius reprehenderit sit voluptas at corporis illo. Suscipit modi ea recusandae hic."
@@ -80,7 +80,7 @@ export default function AllPizzaScreen() {
 
         <PizzaCard
         
-          id="3"
+          id="7"
           title="Сырная с ветчиной"
           info="Ветчина, Сыр Моцарелла, Томатный соус"
           full_info="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ex rerum, exercitationem maiores ut, adipisci voluptate ipsam ullam eius reprehenderit sit voluptas at corporis illo. Suscipit modi ea recusandae hic."

@@ -8,9 +8,7 @@ import AllDrunkScreen from "./Screens/AllDrunkScreen"
 import AllScreen from "./Screens/AllScreen"
 import ShopScreen from './Screens/ShopScreen';
 import BottomTabs from './Components/BottomTabs';
-
-
-
+import SearchScreen from './Screens/SearchScreen';
 
 
 export default function App() {
@@ -25,6 +23,7 @@ export default function App() {
           <Stack.Screen name='AllDrunk' component={AllDrunkScreen} />
           <Stack.Screen name='Screen' component={AllScreen} />
           <Stack.Screen name='Shop' component={ShopScreen} />
+          <Stack.Screen name='Search' component={SearchScreen} />
         </Stack.Navigator>
         <BottomTabs />
       </NavigationContainer>

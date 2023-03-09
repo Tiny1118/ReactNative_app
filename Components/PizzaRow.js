@@ -12,7 +12,7 @@ export default function PizzaRow() {
         info="Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус, Соус..."
         full_info="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ex rerum, exercitationem maiores ut, adipisci voluptate ipsam ullam eius reprehenderit sit voluptas at corporis illo. Suscipit modi ea recusandae hic."
         price="499"
-        image="https://www.pngfind.com/pngs/m/60-603686_-png-transparent-png.png"
+        image="https://pizzapauza.ru/assets/images/products/73/13vegano-slajs-30.jpeg.webp"
       />
 
       <PizzaCard

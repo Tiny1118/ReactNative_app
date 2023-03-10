@@ -7,6 +7,7 @@ import SushiRow from '../Components/SushiRow'
 import PizzaRow from '../Components/PizzaRow'
 import Category from '../Components/Category'
 import DrunkRow from "../Components/DrunkRow"
+import DesertRow from '../Components/DesertRow'
 
 export default function HomeScreen() {
  const navigation = useNavigation()
@@ -60,6 +61,18 @@ export default function HomeScreen() {
     </View>
     <SushiRow />
 
+    {/* Desert Row */}
+    <View style={s.pizzaTop}>
+     <Text style={s.pizza_text}>Десерты</Text>
+     <TouchableOpacity onPress={() => navigation.navigate("AllDesert")}>
+      <View style={s.topBtn}>
+       <Text style={s.allText}>Все</Text>
+       <Icon name='arrow-forward-circle-outline' size={26} color={'#FF7010'} />
+      </View>
+     </TouchableOpacity>
+    </View>
+    <DesertRow />
+
     {/* Drunk Row */}
     <View style={s.pizzaTop}>
      <Text style={s.pizza_text}>Напитки</Text>
@@ -77,6 +90,9 @@ export default function HomeScreen() {
 }
 
 const s = StyleSheet.create({
+ body: {
+  marginBottom: 80
+ },
  top: {
   paddingVertical: 5,
   flexDirection: 'row',

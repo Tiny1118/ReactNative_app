@@ -98,7 +98,7 @@ export default function AllSushiScreen() {
 
 const s = StyleSheet.create({
  body: {
-  paddingBottom: 20
+  paddingBottom: 80
  },
  card: {
   width: '100%',

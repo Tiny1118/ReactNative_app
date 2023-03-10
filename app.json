@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "pizza",
-    "slug": "pizza",
-    "version": "0.65.0",
+    "name": "pizzashop",
+    "slug": "pizzashop",
+    "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/logo.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/logo.jpg",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,24 +18,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.asliddin1.pizza"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.png",
+        "foregroundImage": "./assets/logo.jpg",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.asliddin1.pizza"
+      "package": "com.asliddin1.pizzashop"
     },
     "web": {
-      "favicon": "./assets/logo.png"
+      "favicon": "./assets/logo.jpg"
     },
     "extra": {
       "eas": {
-        "projectId": "ea5f2e98-4dd7-403e-a8b3-4123be7b5157"
+        "projectId": "b745a4ba-2588-4cb8-94c0-33edffdfb2c1"
       }
-    },
-    "owner": "asliddin1"
+    }
   }
 }

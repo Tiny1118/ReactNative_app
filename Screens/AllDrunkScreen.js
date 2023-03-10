@@ -79,7 +79,7 @@ export default function AllDrunkScreen() {
 
 const s = StyleSheet.create({
  body: {
-  paddingBottom: 20
+  paddingBottom: 80
  },
  card: {
   width: '100%',
@@ -99,7 +99,7 @@ const s = StyleSheet.create({
   height: 100
  },
  textBox: {
-  marginLeft: 10
+  marginLeft: 10 
  },
  title: {
   maxWidth: 200,

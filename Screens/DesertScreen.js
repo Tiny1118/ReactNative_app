@@ -86,7 +86,7 @@ export default function DesertScreen() {
     <Text style={s.fullInfo}>{full_info}</Text>
 
 
-    {/* CategoryPizza */}
+    {/* CategoryDesert */}
     <Text style={s.categoryTitle}>Соусы</Text>
     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
 
@@ -113,7 +113,7 @@ export default function DesertScreen() {
         marginRight: 15
        }}>
         <Image source={{
-         uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmp6rvek99XBZQjQyKzpE4WB4QB4fE22wJbgROKG3RqzBJ3T5zzmog0a1Bw9Wtq613eM&usqp=CAU"
+         uri: "https://ezjko34.ru/upload/26fdc23dd0_60.jpg"
         }}
          style={s.CategoryImg}
         />
@@ -134,8 +134,8 @@ export default function DesertScreen() {
         }}>
          <Icon name='checkmark-outline' color={"#FF7010"} />
         </View>
-        <Text style={s.cardText}>Моцарелла</Text>
-        <Text style={s.categoryPrice}>59 ₽</Text>
+        <Text style={s.cardText}>Сгущёнка</Text>
+        <Text style={s.categoryPrice}>49 ₽</Text>
        </View>
       </TouchableOpacity>
 
@@ -160,7 +160,7 @@ export default function DesertScreen() {
         marginRight: 15
        }}>
         <Image source={{
-         uri: "https://cdn-icons-png.flaticon.com/512/3823/3823366.png"
+         uri: "http://site.igis.ru/blog/media/10455/1471329936311454.jpg"
         }}
          style={s.CategoryImg}
         />
@@ -181,7 +181,7 @@ export default function DesertScreen() {
         }}>
          <Icon name='checkmark-outline' color={"#FF7010"} />
         </View>
-        <Text style={s.cardText}>Шампиньоны</Text>
+        <Text style={s.cardText2}>Малиновое варенье</Text>
         <Text style={s.categoryPrice}>59 ₽</Text>
        </View>
       </TouchableOpacity>
@@ -365,6 +365,10 @@ const s = StyleSheet.create({
  cardText: {
   position: 'absolute',
   bottom: -22
+ },
+ cardText2: {
+  position: 'absolute',
+  bottom: -35
  },
  categoryPrice: {
   color: '#FF7010',

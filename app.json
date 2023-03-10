@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "pizzashop",
-    "slug": "pizzashop",
+    "name": "shop-pizza",
+    "slug": "shop-pizza",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.asliddin1.shoppizza"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8a65801a-b215-46fb-a643-06af9c0bcf94"
+      }
     }
   }
 }

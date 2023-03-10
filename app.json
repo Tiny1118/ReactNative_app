@@ -4,7 +4,7 @@
     "slug": "pizzashop",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.jpg",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -22,18 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.jpg",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.asliddin1.pizzashop"
+      }
     },
     "web": {
-      "favicon": "./assets/logo.jpg"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "b745a4ba-2588-4cb8-94c0-33edffdfb2c1"
-      }
+      "favicon": "./assets/favicon.png"
     }
   }
 }

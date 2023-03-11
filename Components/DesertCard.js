@@ -28,7 +28,7 @@ export default function DesertCard({ id, title, info, price, image, full_info })
           <View style={s.textBox}>
             <Text style={s.title}>{title}</Text>
             <Text style={s.info}>{info}</Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Pizza", {
+            <TouchableOpacity onPress={() => navigation.navigate("Desert", {
               id, title, info, price, image, full_info
             })}>
               <View style={s.cardBtn}>

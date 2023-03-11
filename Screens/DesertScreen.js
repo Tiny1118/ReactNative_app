@@ -15,7 +15,6 @@ export default function DesertScreen() {
  const [checked, setChecked] = useState(false)
  const [checked1, setChecked1] = useState(false)
  const [checked2, setChecked2] = useState(false)
- const [checked3, setChecked3] = useState(false)
  const [alert, setAlert] = useState(false)
  const [total, setTotal] = useState(price)
 
@@ -44,14 +43,6 @@ export default function DesertScreen() {
  function check2() {
   checked2 === false ? setChecked2(true) : setChecked2(false)
   if (checked2 === true) {
-   setTotal(total - 59)
-  } else {
-   setTotal(total * 1 + 59)
-  }
- }
- function check3() {
-  checked3 === false ? setChecked3(true) : setChecked3(false)
-  if (checked3 === true) {
    setTotal(total - 59)
   } else {
    setTotal(total * 1 + 59)
@@ -160,7 +151,7 @@ export default function DesertScreen() {
         marginRight: 15
        }}>
         <Image source={{
-         uri: "http://site.igis.ru/blog/media/10455/1471329936311454.jpg"
+         uri: "https://e0.edimdoma.ru/data/ingredients/0000/1181/1181-ed4_wide.jpg?1515751150"
         }}
          style={s.CategoryImg}
         />
@@ -182,7 +173,7 @@ export default function DesertScreen() {
          <Icon name='checkmark-outline' color={"#FF7010"} />
         </View>
         <Text style={s.cardText2}>Малиновое варенье</Text>
-        <Text style={s.categoryPrice}>59 ₽</Text>
+        <Text style={s.categoryPrice2}>49 ₽</Text>
        </View>
       </TouchableOpacity>
 
@@ -207,7 +198,7 @@ export default function DesertScreen() {
         marginRight: 15
        }}>
         <Image source={{
-         uri: "https://cdn-icons-png.flaticon.com/512/186/186131.png"
+         uri: "http://admiral.xzive.ru//menu/maxi/menu11/12194155995b5806e584b506.49469298.png"
         }}
          style={s.CategoryImg}
         />
@@ -228,55 +219,8 @@ export default function DesertScreen() {
         }}>
          <Icon name='checkmark-outline' color={"#FF7010"} />
         </View>
-        <Text style={s.cardText}>Лук</Text>
-        <Text style={s.categoryPrice}>59 ₽</Text>
-       </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => check3()}>
-       <View style={checked3 === false ? {
-        width: 120,
-        height: 120,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginRight: 15
-       } : {
-        width: 120,
-        height: 120,
-        borderWidth: 1,
-        borderColor: '#FF7010',
-        borderRadius: 12,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        marginRight: 25
-       }}>
-        <Image source={{
-         uri: "https://cdn-icons-png.flaticon.com/512/2909/2909784.png"
-        }}
-         style={s.CategoryImg}
-        />
-        <View style={checked3 === false ? {
-         display: 'none'
-        } : {
-         width: 25,
-         height: 25,
-         borderWidth: 1,
-         borderColor: '#FF7010',
-         position: 'absolute',
-         flexDirection: 'row',
-         borderRadius: 500,
-         alignItems: 'center',
-         justifyContent: 'center',
-         top: 10,
-         right: 10
-        }}>
-         <Icon name='checkmark-outline' color={"#FF7010"} />
-        </View>
-        <Text style={s.cardText}>Сладкий перец</Text>
-        <Text style={s.categoryPrice}>59 ₽</Text>
+        <Text style={s.cardText}>Сырный соус</Text>
+        <Text style={s.categoryPrice}>49 ₽</Text>
        </View>
       </TouchableOpacity>
 
@@ -332,11 +276,12 @@ const s = StyleSheet.create({
  category: {
   flexDirection: 'row',
   marginTop: 12,
-  paddingBottom: 40
+  paddingBottom: 80
  },
  CategoryImg: {
-  width: 55,
-  height: 55
+  width: 70,
+  height: 70,
+  resizeMode: 'contain'
  },
  bottom: {
   flexDirection: 'row',
@@ -368,12 +313,20 @@ const s = StyleSheet.create({
  },
  cardText2: {
   position: 'absolute',
-  bottom: -35
+  bottom: -35,
+  textAlign: 'center'
  },
  categoryPrice: {
   color: '#FF7010',
   position: 'absolute',
   bottom: -40,
+  fontSize: 14,
+  fontWeight: '700'
+ },
+ categoryPrice2: {
+  color: '#FF7010',
+  position: 'absolute',
+  bottom: -55,
   fontSize: 14,
   fontWeight: '700'
  },

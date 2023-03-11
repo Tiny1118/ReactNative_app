@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, Button, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import Icon from "react-native-vector-icons/Ionicons"
@@ -20,7 +20,7 @@ export default function HomeScreen() {
 
  return (
   <View style={s.body}>
-   <ScrollView horizontal={false} >
+   <ScrollView horizontal={false}>
 
     <View style={s.top}>
      <Image
@@ -32,7 +32,7 @@ export default function HomeScreen() {
 
     {/* Category Row */}
     <Category />
-
+    
     {/* Home Row */}
     <HomeCards />
 
@@ -47,7 +47,7 @@ export default function HomeScreen() {
      </TouchableOpacity>
     </View>
 
-    <PizzaRow />
+    <PizzaRow id={"red"} />
 
     {/* Sushi Row */}
     <View style={s.pizzaTop}>
@@ -74,7 +74,7 @@ export default function HomeScreen() {
     <DesertRow />
 
     {/* Drunk Row */}
-    <View style={s.pizzaTop}>
+    <View id="red" style={s.pizzaTop}>
      <Text style={s.pizza_text}>Напитки</Text>
      <TouchableOpacity onPress={() => navigation.navigate("AllDrunk")}>
       <View style={s.topBtn}>

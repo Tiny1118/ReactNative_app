@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "shop-pizza",
-    "slug": "shop-pizza",
+    "name": "pizzaios",
+    "slug": "pizzaios",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,21 +18,21 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.asliddin1.pizzaios"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.asliddin1.shoppizza"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "8a65801a-b215-46fb-a643-06af9c0bcf94"
+        "projectId": "de84fce6-2776-418e-967b-8bdbfd1a0a6f"
       }
     }
   }
